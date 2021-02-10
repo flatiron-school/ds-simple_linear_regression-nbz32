@@ -22,7 +22,9 @@ def best_line(X, Y):
     
     Xs = np.linspace(np.min(X), np.max(X), 100)
     Ys = beta_1 * Xs + beta_0
-    plt.plot(X, Y, 'ro', label='datapoints')
-    plt.plot(Xs, Ys, 'k', label=f'y={round(beta_1, 2)}x+{round(beta_0, 2)}')
+    
+    fig, ax = plt.subplots()
+    ax.plot(X, Y, 'ro', label='datapoints')
+    ax.plot(Xs, Ys, 'k', label=f'y={round(beta_1, 2)}x+{round(beta_0, 2)}')
     plt.legend()
     plt.show();
